@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+
+<div class="container mt-5">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-4">
+      <h1 class="display-5 fw-bold">Sistema de Cadastro</h1>
+
+      <p class="col-md-8 fs-5">
+        Exemplo desenvolvido com Express, EJS, Routes, Partials e Bootstrap.
+      </p>
+
+      <hr class="my-4">
+
+      <h3 class="h5 mb-3 fw-bold text-secondary">Gerenciamento de:</h3>
+      
+      <!-- Botões de acesso rápido alinhados lado a lado ou empilhados no mobile -->
+      <div class="d-flex flex-wrap gap-2">
+        <a href="/categorias" class="btn btn-primary btn-lg">Categorias</a>
+        <a href="/clientes" class="btn btn-primary btn-lg">Clientes</a>
+        <a href="/fornecedores" class="btn btn-primary btn-lg">Fornecedores</a>
+        <a href="/produtos" class="btn btn-primary btn-lg">Produtos</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
