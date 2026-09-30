@@ -95,8 +95,9 @@
                                         <%= mostrar.descricao %>
                                     </td>
                                     <td>
-                                        <a class="btn btn-sm btn-warning" href="/categorias/<%= mostrar.id %>/editar">Editar</a>
                                         <a class="btn btn-warning btn-sm" href="/categorias/excluir/<%= mostrar.id %>" onclick="return confirm('Tem certeza que deseja excluir esta categoria?')">Excluir</a>
+                                        <a class="btn btn-success btn-sm" href="/categorias/editar/<%= mostrar.id %>">Editar</a>
+
                                     </td>
                                 </tr>
                                 <% }) %>
