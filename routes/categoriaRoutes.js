@@ -40,4 +40,10 @@ router.post("/", (req, res) => {
   categorias.push(novaCategoria);
   res.redirect("/categorias");
 });
+
+router.get("/excluir/:id", (req, res) => {
+  let id = parseInt(req.params.id);
+  categorias = categorias.filter(c => c.id !== id);
+  res.redirect("/categorias");
+});
 module.exports = router;

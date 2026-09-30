@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -79,18 +78,28 @@
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>Descrição</th>
-
+                                <th>Opções</th>
                             </tr>
 
                         </thead>
                         <tbody>
-                             <% categorias.forEach(mostrar => { %>
-                            <tr>
-                                <td><%= mostrar.id %></td>
-                                <td><%= mostrar.nome %></td>
-                                <td><%= mostrar.descricao %></td>
-                            </tr>
-                            <% }) %>
+                            <% categorias.forEach(mostrar=> { %>
+                                <tr>
+                                    <td>
+                                        <%= mostrar.id %>
+                                    </td>
+                                    <td>
+                                        <%= mostrar.nome %>
+                                    </td>
+                                    <td>
+                                        <%= mostrar.descricao %>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-sm btn-warning" href="/categorias/<%= mostrar.id %>/editar">Editar</a>
+                                        <a class="btn btn-warning btn-sm" href="/categorias/excluir/<%= mostrar.id %>" onclick="return confirm('Tem certeza que deseja excluir esta categoria?')">Excluir</a>
+                                    </td>
+                                </tr>
+                                <% }) %>
                         </tbody>
                     </table>
                 </div>
