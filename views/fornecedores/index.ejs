@@ -60,6 +60,7 @@
                                 <th>CNPJ</th>
                                 <th>Telefone</th>
                                 <th>E-mail</th>
+                                <th>Opções</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,6 +71,10 @@
                                 <td><%= fornecedor.cnpj %></td>
                                 <td><%= fornecedor.telefone %></td>
                                 <td><%= fornecedor.email %></td>
+                                <td>
+                                    <a class="btn btn-warning btn-sm" href="/fornecedores/excluir/<%= fornecedor.id %>" onclick="return confirm('Tem certeza que deseja excluir este fornecedor?')">Excluir</a>
+                                    <a class="btn btn-success btn-sm" href="/fornecedores/editar/<%= fornecedor.id %>">Editar</a>
+                                </td>
                             </tr>
                             <% }) %>
                         </tbody>

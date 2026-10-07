@@ -48,4 +48,36 @@ router.post("/", (req, res) => {
   res.redirect("/produtos");
 });
 
+router.get("/excluir/:id", (req, res) => {
+  let id = parseInt(req.params.id);
+  produtos = produtos.filter(p => p.id !== id);
+  res.redirect("/produtos");
+});
+
+//editar - form - get
+router.get("/editar/:id", (req, res) => {
+  let id = parseInt(req.params.id);
+  let produto = produtos.find(p => p.id === id);
+
+  if(!produto) {
+    return res.redirect("/produtos");
+  }
+  res.render("produtos/editar", { produto: produto });
+});
+
+//editar - efetiva - post
+router.post("/editar/:id", (req, res) => {
+  let id = parseInt(req.params.id);
+  let produto = produtos.find(p => p.id === id);
+  if (produto) {
+    const { nome, descricao, preco, estoque, categoria } = req.body;
+    produto.nome = nome;
+    produto.descricao = descricao;
+    produto.preco = preco;
+    produto.estoque = estoque;
+    produto.categoria = categoria;
+  }
+  res.redirect("/produtos");
+});
+
 module.exports = router;
