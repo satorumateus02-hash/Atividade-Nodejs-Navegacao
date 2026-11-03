@@ -26,6 +26,10 @@ router.get("/cadastro", (req, res) => {
   res.render("fornecedores/form-cadastro");
 });
 
+router.get("/listar", (req, res) => {
+  res.render("fornecedores/listar", { fornecedores: fornecedores });
+});
+
 router.post("/", (req, res) => {
   const { nome, cnpj, telefone, email } = req.body;
 

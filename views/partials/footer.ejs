@@ -1,7 +1,92 @@
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+<footer class="footer-bar" style="min-height: 200px; display: flex; align-items: center; width: 100%; margin-top: auto; margin-bottom: 0;">
+  <div class="container py-4">
+    <div class="row align-items-center g-4">
+      <div class="col-md-5">
+        <div class="footer-brand">Sistema</div>
+        <p class="footer-text mb-0">Gerenciamento administrativo e controle de cadastros.</p>        
+        <p class="footer-text mb-0">By Satoru Nakazawa</p>
 
+      </div>
+
+      <div class="col-md-3 text-md-center">
+        <div class="footer-label">Módulos</div>
+        <div class="footer-module-list mt-3">
+          <a href="/categorias">• Categorias</a>
+          <a href="/clientes">• Clientes</a>
+          <a href="/fornecedores">• Fornecedores</a>
+          <a href="/produtos">• Produtos</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-md-end text-center">
+        <div class="footer-copy">© 2026 - Todos os direitos reservados</div>
+        <div class="footer-text small mt-2">Desenvolvido para Programação Web 2</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-bar {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 -12px 30px rgba(15, 23, 42, 0.15);
+  }
+
+  .footer-brand {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.25rem;
+    color: white;
+  }
+
+  .footer-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .footer-module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-module-list a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  .footer-module-list a:hover {
+    color: white;
+    opacity: 1;
+  }
+
+  .footer-text,
+  .footer-copy {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-copy {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

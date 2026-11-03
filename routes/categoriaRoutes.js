@@ -30,6 +30,10 @@ router.get("/cadastro", (req, res) => {
   res.render("categorias/form-cadastro");
 });
 
+router.get("/listar", (req, res) => {
+  res.render("categorias/listar", { categorias: categorias });
+});
+
 router.post("/", (req, res) => {
   const { nome, descricao } = req.body;
   const novaCategoria = {

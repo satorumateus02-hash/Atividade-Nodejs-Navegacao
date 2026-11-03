@@ -38,6 +38,11 @@ router.get("/cadastro", (req, res) => {
   res.render("clientes/form-cadastro");
 });
 
+// LISTAR CLIENTES EM PÁGINA SEPARADA
+router.get("/listar", (req, res) => {
+  res.render("clientes/listar", { clientes: clientes });
+});
+
 // SALVAR CADASTRO (POST)
 router.post("/", (req, res) => {
   const { nome, email, telefone, cidade } = req.body;

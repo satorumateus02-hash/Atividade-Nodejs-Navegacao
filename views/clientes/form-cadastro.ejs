@@ -1,72 +1,45 @@
-<%- include("../partials/header") %> 
+<%- include("../partials/header") %>
 <%- include("../partials/nav") %>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
   <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-      <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white">
-          <h4 class="mb-0">Novo Cliente</h4>
+    <div class="col-md-8 col-lg-7">
+      <div class="card form-panel shadow-sm">
+        <div class="card-header form-header">
+          <div class="d-flex justify-content-between align-items-center gap-3">
+            <div>
+              <div class="eyebrow">Cadastro</div>
+              <h4 class="mb-0">Novo Cliente</h4>
+            </div>
+            <span class="status-badge">Ativo</span>
+          </div>
         </div>
 
-        <div class="card-body">
+        <div class="card-body p-4 p-md-5">
           <form action="/clientes" method="POST">
-            
-            <!-- Campo Nome -->
-            <div class="mb-3">
-              <label for="nome" class="form-label"> Nome </label>
-              <input
-                type="text"
-                class="form-control"
-                id="nome"
-                name="nome"
-                placeholder="Digite o nome"
-                required
-              />
+            <div class="field-group">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control custom-input" id="nome" name="nome" placeholder="Digite o nome" required />
             </div>
 
-            <!-- Campo Email -->
-            <div class="mb-3">
-              <label for="email" class="form-label"> Email </label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                placeholder="Digite o email"
-                required
-              />
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Digite o email" required />
             </div>
 
-            <!-- Campo Telefone -->
-            <div class="mb-3">
-              <label for="telefone" class="form-label"> Telefone </label>
-              <input
-                type="text"
-                class="form-control"
-                id="telefone"
-                name="telefone"
-                placeholder="Digite o telefone"
-                required
-              />
+            <div class="field-group">
+              <label for="telefone">Telefone</label>
+              <input type="text" class="form-control custom-input" id="telefone" name="telefone" placeholder="Digite o telefone" required />
             </div>
 
-            <!-- Campo Cidade -->
-            <div class="mb-3">
-              <label for="cidade" class="form-label"> Cidade </label>
-              <input
-                type="text"
-                class="form-control"
-                id="cidade"
-                name="cidade"
-                placeholder="Digite a cidade"
-                required
-              />
+            <div class="field-group">
+              <label for="cidade">Cidade</label>
+              <input type="text" class="form-control custom-input" id="cidade" name="cidade" placeholder="Digite a cidade" required />
             </div>
 
-            <div class="d-flex gap-2">
+            <div class="form-actions d-flex gap-2">
               <button type="submit" class="btn btn-success">Cadastrar</button>
-              <a href="/clientes" class="btn btn-secondary"> Cancelar </a>
+              <a href="/clientes" class="btn btn-secondary">Cancelar</a>
             </div>
           </form>
         </div>

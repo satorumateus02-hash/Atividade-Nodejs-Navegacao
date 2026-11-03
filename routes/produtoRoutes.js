@@ -31,6 +31,11 @@ router.get("/cadastro", (req, res) => {
   res.render("produtos/form-cadastro");
 });
 
+// GET /produtos/listar - Página separada de listagem
+router.get("/listar", (req, res) => {
+  res.render("produtos/listar", { produtos: produtos });
+});
+
 // POST /produtos - Receber dados do formulário
 router.post("/", (req, res) => {
   const { nome, descricao, preco, estoque, categoria } = req.body;

@@ -1,38 +1,43 @@
 <%- include("../partials/header") %>
 <%- include("../partials/nav") %>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
   <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-      <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white">
-          <h4 class="mb-0">Novo Fornecedor</h4>
+    <div class="col-md-8 col-lg-7">
+      <div class="card form-panel shadow-sm">
+        <div class="card-header form-header">
+          <div class="d-flex justify-content-between align-items-center gap-3">
+            <div>
+              <div class="eyebrow">Cadastro</div>
+              <h4 class="mb-0">Novo Fornecedor</h4>
+            </div>
+            <span class="status-badge">Ativo</span>
+          </div>
         </div>
 
-        <div class="card-body">
+        <div class="card-body p-4 p-md-5">
           <form action="/fornecedores" method="POST">
-            
-            <div class="mb-3">
-              <label for="nome" class="form-label">Nome da Empresa</label>
-              <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite a razão social ou nome" required />
+            <div class="field-group">
+              <label for="nome">Nome da Empresa</label>
+              <input type="text" class="form-control custom-input" id="nome" name="nome" placeholder="Digite a razão social ou nome" required />
             </div>
 
-            <div class="mb-3">
-              <label for="cnpj" class="form-label">CNPJ</label>
-              <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="00.000.000/0001-00" required />
+            <div class="field-group">
+              <label for="cnpj">CNPJ</label>
+              <input type="text" class="form-control custom-input" id="cnpj" name="cnpj" placeholder="00.000.000/0001-00" required />
             </div>
 
-            <div class="mb-3">
-              <label for="telefone" class="form-label">Telefone</label>
-              <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+            <div class="field-group">
+              <label for="telefone">Telefone</label>
+              <input type="text" class="form-control custom-input" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
             </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">E-mail de Contato</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@empresa.com" required />
+            <div class="field-group">
+              <label for="email">E-mail de Contato</label>
+              <input type="email" class="form-control custom-input" id="email" name="email" placeholder="exemplo@empresa.com" required />
             </div>
 
-            <div class="d-flex gap-2 mt-4">
+            <div class="form-actions d-flex gap-2">
               <button type="submit" class="btn btn-success">Salvar Fornecedor</button>
               <a href="/fornecedores" class="btn btn-secondary">Cancelar</a>
             </div>

@@ -1,42 +1,48 @@
 <%- include("../partials/header") %>
 <%- include("../partials/nav") %>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
   <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-      <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white">
-          <h4 class="mb-0">Novo Produto</h4>
+    <div class="col-md-8 col-lg-7">
+      <div class="card form-panel shadow-sm">
+        <div class="card-header form-header">
+          <div class="d-flex justify-content-between align-items-center gap-3">
+            <div>
+              <div class="eyebrow">Cadastro</div>
+              <h4 class="mb-0">Novo Produto</h4>
+            </div>
+            <span class="status-badge">Ativo</span>
+          </div>
         </div>
 
-        <div class="card-body">
+        <div class="card-body p-4 p-md-5">
           <form action="/produtos" method="POST">
-            <div class="mb-3">
-              <label for="nome" class="form-label">Nome do Produto</label>
-              <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: Notebook" required />
+            <div class="field-group">
+              <label for="nome">Nome do Produto</label>
+              <input type="text" class="form-control custom-input" id="nome" name="nome" placeholder="Ex: Notebook" required />
             </div>
 
-            <div class="mb-3">
-              <label for="descricao" class="form-label">Descrição</label>
-              <textarea class="form-control" id="descricao" name="descricao" rows="3" placeholder="Breve descrição do produto" required></textarea>
+            <div class="field-group">
+              <label for="descricao">Descrição</label>
+              <textarea class="form-control custom-input" id="descricao" name="descricao" rows="3" placeholder="Breve descrição do produto" required></textarea>
             </div>
 
-            <div class="mb-3">
-              <label for="preco" class="form-label">Preço (R$)</label>
-              <input type="number" step="0.01" class="form-control" id="preco" name="preco" placeholder="0.00" required />
+            <div class="field-group">
+              <label for="preco">Preço (R$)</label>
+              <input type="number" step="0.01" class="form-control custom-input" id="preco" name="preco" placeholder="0.00" required />
             </div>
 
-            <div class="mb-3">
-              <label for="estoque" class="form-label">Qtd. Estoque</label>
-              <input type="number" class="form-control" id="estoque" name="estoque" placeholder="0" required />
+            <div class="field-group">
+              <label for="estoque">Qtd. Estoque</label>
+              <input type="number" class="form-control custom-input" id="estoque" name="estoque" placeholder="0" required />
             </div>
 
-            <div class="mb-3">
-              <label for="categoria" class="form-label">Categoria</label>
-              <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Ex: Informática" required />
+            <div class="field-group">
+              <label for="categoria">Categoria</label>
+              <input type="text" class="form-control custom-input" id="categoria" name="categoria" placeholder="Ex: Informática" required />
             </div>
 
-            <div class="d-flex gap-2 mt-4">
+            <div class="form-actions d-flex gap-2">
               <button type="submit" class="btn btn-success">Salvar Produto</button>
               <a href="/produtos" class="btn btn-secondary">Cancelar</a>
             </div>
