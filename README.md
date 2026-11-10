@@ -116,9 +116,11 @@ As alterações abaixo foram ajustadas manualmente depois das sugestões da IA, 
 - correção de espaçamento e margens entre blocos
 - adaptação da navegação para manter consistência entre páginas
 - ajuste final do footer para maior legibilidade
-- revisão da aparência geral para manter a interface funcional e profissional
+- revisão da aparência geral para manter o sistema funcional e profissional
 - personalização do código para evitar problemas de layout e manter o sistema estável
 
 ## Observação
 Este arquivo funciona como evidência textual da conversa e das melhorias. A implementação final foi revisada e adaptada manualmente para se encaixar ao projeto real.
 
+## Conclusão
+A migração substituiu o armazenamento temporário em arrays nas rotas por arquivos JSON para as quatro entidades. Assim, os registros permanecem disponíveis após reiniciar o servidor, e o sistema mantém as operações de cadastro, listagem, edição e exclusão. A IA auxiliou na implementação e na documentação, com ajustes realizados para integrar a solução à estrutura existente do projeto.
